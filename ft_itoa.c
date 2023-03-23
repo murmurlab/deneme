@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "murmurlib.h"
 
 void	ft_recursive(int nb, char *str)
 {

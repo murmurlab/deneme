@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "murmurlib.h"
 /* 
 static int	count_words(const char *str, char c)
 {

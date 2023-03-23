@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahbasara <ahbasara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 15:24:00 by ahbasara          #+#    #+#             */
-/*   Updated: 2022/12/09 15:24:00 by ahbasara         ###   ########.fr       */
+/*   Created: 2023/01/05 08:36:33 by ahbasara          #+#    #+#             */
+/*   Updated: 2023/01/14 13:16:41 by ahbasara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "murmurlib.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	c;
+# include <stdarg.h>
+# include <unistd.h>
 
-	c = 0;
-	while (s[c])
-		c++;
-	return (c);
-}
-/* 
-int	main(void)
-{
-	size_t s;
-	char *arr = "faruk";
+unsigned long long int	x(unsigned long long int i, char *s, char m);
+unsigned long long int	q(char *s, char p, char kar);
+int						ft_printf(const char *s2, ...);
 
-	s = ft_strlen(arr);
-	printf("%zu\n", s);
-}
- */
+#endif

@@ -25,7 +25,7 @@ string ’s’, and passing its index as first argument
 to create a new string (with malloc(3)) resulting
 from successive applications of ’f’. */
 
-#include "libft.h"
+#include "murmurlib.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
