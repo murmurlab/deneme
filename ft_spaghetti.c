@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "murmurlib.h.h"
+#include "murmurlib.h"
 
 unsigned long long int	q(char *s, char p, char kar)
 {
@@ -38,7 +38,7 @@ unsigned long long int	x(unsigned long long int i, char *s, char m)
 		write(1, "-", (lne++ || 1));
 		i *= -1;
 	}
-	while ((digit * base) && i / (digit * base))
+	while (((digit * base) != 0) && i / (digit * base))
 		digit *= (base * (lne++ || 1));
 	while (digit && (i / digit || !i))
 	{

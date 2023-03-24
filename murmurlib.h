@@ -14,12 +14,26 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4
+# endif
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+char					*get_next_line(int fd);
+char					*ft_read_to_left_str(int fd, char *left_str);
+char					*ft_get_line(char *left_str);
+char					*ft_new_left_str(char *left_str);
+//UTILS
+char					*gnl_ft_strchr(const char *s, int c);
+char					*gnl_ft_strjoin(char *s1, char *s2);
+size_t					gnl_ft_strlen(const char *s);
 
 unsigned long long int	x(unsigned long long int i, char *s, char m);
 unsigned long long int	q(char *s, char p, char kar);
