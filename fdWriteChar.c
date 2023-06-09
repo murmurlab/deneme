@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 /* #include <fcntl.h>  */
 
 void	fdWriteChar(char c, int fd)

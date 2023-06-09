@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 char	*strcut(char const *s, unsigned int start, size_t len)
 {

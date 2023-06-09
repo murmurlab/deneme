@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 void	lldel(t_list *lst, void (*del)(void *))
 {

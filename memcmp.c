@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 int	xmemcmp(const void *s1, const void *s2, size_t n)
 {

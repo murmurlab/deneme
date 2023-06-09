@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 t_list	*llnew(void *content)
 {

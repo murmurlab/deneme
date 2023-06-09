@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 char	*strnstr(const char *str, const char *to_find, size_t len)
 {

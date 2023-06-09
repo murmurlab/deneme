@@ -1,8 +1,8 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	xstrlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	ret;
 

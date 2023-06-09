@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 int	p(const char *str, ...)
 {
@@ -17,7 +17,7 @@ int	p(const char *str, ...)
 			check_format(args, &str, &len);
 		}
 		else
-			len += q(NULL, 0, *(str++));
+			len += qp(NULL, 0, *(str++));
 	}
 	va_end(args);
 	return (len);

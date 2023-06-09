@@ -15,7 +15,7 @@ string ’s’, and passing its index as first argument
 to create a new string (with malloc(3)) resulting
 from successive applications of ’f’. */
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 char	*strmap(char const *s, char (*f)(unsigned int, char))
 {

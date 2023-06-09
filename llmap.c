@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 t_list	*llmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

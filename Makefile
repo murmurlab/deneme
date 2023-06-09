@@ -6,7 +6,7 @@ CFLAGS          = -std=c99 -Wall -Wextra  -I.
 
 OBJS            = $(srcs:.c=.o)
 
-NAME			= murmurlib.a
+NAME			= murmurlibc.a
 
 all:            $(NAME)
 

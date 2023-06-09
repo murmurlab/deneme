@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 /* 
 static int	count_words(const char *str, char c)
 {

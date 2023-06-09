@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 size_t	xstrlcat(char *dst, const char *src, size_t size)
 {

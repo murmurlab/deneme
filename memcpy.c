@@ -1,7 +1,7 @@
 // ahbasara
 
 /* #include <stdio.h> */
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 void	*xmemcpy(void *dst, const void *src, size_t n)
 {

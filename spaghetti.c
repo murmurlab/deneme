@@ -1,6 +1,6 @@
 // ahbasara
 
-#include "murmurlib.h"
+#include "murmurlibc.h"
 
 unsigned long long int	q(char *s, char p, char kar)
 {

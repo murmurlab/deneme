@@ -1,7 +1,7 @@
 // ahbasara
 
-#ifndef MURMURLIB_H
-# define MURMURLIB_H
+#ifndef MURMURLIBC_H
+# define MURMURLIBC_H
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
@@ -29,6 +29,8 @@ size_t					gnl_strlen(const char *s);
 unsigned long long int	x(unsigned long long int i, char *s, char m);
 unsigned long long int	q(char *s, char p, char kar);
 int						spaghetti(const char *s2, ...);
+unsigned long long int	xp(unsigned long long int i, char *s, char m);
+unsigned long long int	qp(char *s, char p, char kar);
 
 void					check_format(va_list argl, \
 							const char **str, int *len);
