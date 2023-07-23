@@ -2,7 +2,7 @@
 
 #include "murmurlibc.h"
 
-char	*strchr(const char *s, int c)
+char	*xstrchr(const char *s, int c)
 {
 	while (*s)
 	{
