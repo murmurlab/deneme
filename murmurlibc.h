@@ -14,9 +14,12 @@
 typedef struct s_list
 {
 	void			*content;
+	int				i;
+	struct s_list	*(*findex)(struct s_list *, int);
 	struct s_list	*next;
 }	t_list;
 
+t_list					*findex(t_list *p, int f);
 char					*multiRowRead(int fd);
 char					*read_to_left_str(int fd, char *left_str);
 char					*get_line(char *left_str);
