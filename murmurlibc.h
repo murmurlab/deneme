@@ -14,9 +14,12 @@
 typedef struct s_list
 {
 	void			*content;
+	int				i;
+	struct s_list	*(*findex)(struct s_list *, int);
 	struct s_list	*next;
 }	t_list;
 
+t_list					*findex(t_list *p, int f);
 char					*multiRowRead(int fd);
 char					*read_to_left_str(int fd, char *left_str);
 char					*get_line(char *left_str);
@@ -76,6 +79,8 @@ char					*strcut(char const *s, \
 char					*stradd(char const *s1, const char *s2);
 char					*strtrim(char const *s1, char const *set);
 size_t					xstrlen(const char *s);
+size_t					strclen(const char *s, char c);
+size_t					strclen2(const char *s, char c);
 size_t					xstrlcpy(char *dst, const char *src, size_t dstsize);
 size_t					xstrlcat(char *dst, const char *src, size_t dstsize);
 char					*strmap(char const *s, \
