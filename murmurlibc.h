@@ -19,13 +19,14 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-typedef struct s_list
+typedef struct s_wasd
 {
 	int				*i;
-	struct s_list	*w;
-	struct s_list	*a;
-	struct s_list	*s;
-	struct s_list	*d;
+	struct s_wasd	*prev;
+	struct s_wasd	*w;
+	struct s_wasd	*a;
+	struct s_wasd	*s;
+	struct s_wasd	*d;
 }	t_wasd;
 
 char					*multiRowRead(int fd);
