@@ -19,7 +19,15 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-t_list					*findex(t_list *p, int f);
+typedef struct s_list
+{
+	int				*i;
+	struct s_list	*w;
+	struct s_list	*a;
+	struct s_list	*s;
+	struct s_list	*d;
+}	t_wasd;
+
 char					*multiRowRead(int fd);
 char					*read_to_left_str(int fd, char *left_str);
 char					*get_line(char *left_str);
@@ -49,6 +57,8 @@ void					llclr(t_list **lst, void (*del)(void*));
 void					lliter(t_list *lst, void (*f)(void *));
 t_list					*llmap(t_list *lst, void *(*f)(void *)\
 						, void (*del)(void *));
+t_wasd					*ll4new(void *content);
+t_list					*findex(t_list *p, int f);
 
 char					*toAscii(int n);
 int						isalpha(int c);
