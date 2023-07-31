@@ -21,13 +21,14 @@ typedef struct s_list
 
 typedef struct s_wasd
 {
-	int				*i;
-	struct s_wasd	*prev;
-	struct s_wasd	*w;
-	struct s_wasd	*a;
-	struct s_wasd	*s;
-	struct s_wasd	*d;
-}	t_wasd;
+    int             *i;
+    struct s_wasd   *prev;
+    struct s_wasd   *ww;
+    struct s_wasd   *aa;
+    struct s_wasd   *ss;
+    struct s_wasd   *dd;
+} t_wasd;
+
 
 char					*multiRowRead(int fd);
 char					*read_to_left_str(int fd, char *left_str);

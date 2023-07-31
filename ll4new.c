@@ -11,10 +11,10 @@ t_wasd	*ll4new(void *content)
 		return (NULL);
 	elt->i = content;
 	elt->prev = NULL;
-	elt->w = NULL;
-	elt->a = NULL;
-	elt->s = NULL;
-	elt->d = NULL;
+	elt->ww = NULL;
+	elt->aa = NULL;
+	elt->ss = NULL;
+	elt->dd = NULL;
 	return (elt);
 }
 
