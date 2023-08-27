@@ -55,8 +55,9 @@ int						lllen(t_list *lst);
 t_list					*llend(t_list *lst);
 void					llprepend(t_list **lst, t_list *new);
 void					lldel(t_list *lst, void (*del)(void*));
+void					llpop(t_list **lst, void (*del)(void*));
 void					llclr(t_list **lst, void (*del)(void*));
-void					lliter(t_list *lst, void (*f)(void *));
+void					lliter(t_list *lst, void (*f)(void *, void *), void *p);
 t_list					*llmap(t_list *lst, void *(*f)(void *)\
 						, void (*del)(void *));
 t_wasd					*ll4new(void *content);
@@ -97,7 +98,7 @@ size_t					xstrlcpy(char *dst, const char *src, size_t dstsize);
 size_t					xstrlcat(char *dst, const char *src, size_t dstsize);
 char					*strmap(char const *s, \
 						char (*f)(unsigned int, char));
-void					striter(char *s, void (*f)(unsigned int, char*));
+void					striter(char *s, void (*f)(unsigned int, char *, void *), void *p);
 
 char					**seperate(char const *s, char c);
 
