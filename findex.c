@@ -1,4 +1,9 @@
 
+
+
+
+
+
 #include "murmurlibc.h"
 
 t_list	*findex(t_list *p, int f)

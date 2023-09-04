@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // ahbasara
 
 int	isalpha(int c)

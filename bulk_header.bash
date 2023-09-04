@@ -24,15 +24,31 @@ while [ "$#" -gt 0 ]; do
   shift
 done
 
+insert_content=""
+
+if [ -n "$insert_file" ]; then
+  insert_content="$(cat "$insert_file")\n"
+fi
+
 for dosya in "${dosyalar[@]}"; do
+  satir_sayisi=$(cat "$dosya" | wc -l)
+
   if [ -f "$dosya" ]; then
     if [ "$delete_start" = true ]; then
-      sed -i "$backup" '1,11d' "$dosya"
-      echo "delete bulk: $dosya"
+      if [[ $satir_sayisi -ge 11 && $(head -n 11 "$dosya" | grep -c '^/\*') -eq 11 ]]; then
+        sed -i "$backup" '1,11d' "$dosya"
+        echo "delete bulk: $dosya"
+      else
+        echo "Cant extract! İlk 11 satır /* ile başlamaz: $dosya"
+      fi
     fi
-    if [ -n "$insert_file" ]; then
-      cat "$insert_file" "$dosya" > temp_file && mv temp_file "$dosya"
-      echo "insert content: $dosya"
+    if [ -n "$insert_content" ]; then
+      if [[ $satir_sayisi -ge 11 && $(head -n 11 "$dosya" | grep -c '^/\*') -eq 11 ]]; then
+        echo "Zaten var! İlk 11 satır /* ile başlar: $dosya"
+      else
+        echo "$insert_content" > temp_file && cat "$dosya" >> temp_file && mv temp_file "$dosya"
+        echo "insert content: $dosya"
+      fi
     fi
   else
     echo "Dosya bulunamadı: $dosya"

@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // ahbasara
 
 int	isalnum(int c)

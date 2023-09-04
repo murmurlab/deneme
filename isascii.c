@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // ahbasara
 
 int	isascii(int c)

@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // ahbasara
 
 int	gnome(int c)
