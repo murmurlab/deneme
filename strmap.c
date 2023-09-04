@@ -1,3 +1,4 @@
+
 // ahbasara
 
 /* Function name ft_strmapi

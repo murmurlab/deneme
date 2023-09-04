@@ -1,3 +1,4 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
@@ -27,7 +28,7 @@ char	*xstrcpy(char *dest, char *src)
 	return (dest);
 }
 
-char	*toAscii(int nb)
+char	*x_itoa(int nb)
 {
 	char	*str;
 	char	digit;

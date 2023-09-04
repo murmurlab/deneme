@@ -1,8 +1,9 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
 
-void	llclr(t_list **lst, void (*del)(void*))
+void	llclr(t_list **lst, void (*del)(void **))
 {
 	t_list	*tmp;
 
@@ -11,7 +12,7 @@ void	llclr(t_list **lst, void (*del)(void*))
 	while (lst && *lst)
 	{
 		tmp = (*lst)->next;
-		lldel(*lst, del);
+		lldel(lst, del);
 		*lst = tmp;
 	}
 }

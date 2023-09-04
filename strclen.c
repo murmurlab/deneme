@@ -1,3 +1,4 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
@@ -7,8 +8,8 @@ size_t	strclen(const char *s, char c)
 	size_t	r;
 
 	r = 0;
-	while ( (((*s == c) && r++) || 1) && *s++)
-        ;
+	while ((((*s == c) && r++) || 1) && *s++)
+		;
 	return (r);
 }
 /* 

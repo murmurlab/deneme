@@ -1,8 +1,9 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
 
-int	toInt(const char *str)
+int	x_atoi(const char *str)
 {
 	int	is_neg;
 	int	res;

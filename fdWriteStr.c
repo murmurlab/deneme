@@ -1,8 +1,9 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
 
-void	fdWriteStr(char *s, int fd)
+void	str2fd(char *s, int fd)
 {
 	if (!s)
 		return ;

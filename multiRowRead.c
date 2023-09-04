@@ -1,3 +1,4 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
@@ -38,7 +39,8 @@ char	*get_line(char *left)
 		return (NULL);
 	while (left[i] && left[i] != '\n')
 		i++;
-	str = (char *)malloc(sizeof(char) * (i + 1 + (gnl_strchr(left, '\n') && 1)));
+	str = (char *)malloc(sizeof(char) * (i + 1 + (gnl_strchr(left, '\n') && 1 \
+												)));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -80,7 +82,7 @@ char	*read_to_left_str(int fd, char *left)
 	return (left);
 }
 
-char	*multiRowRead(int fd)
+char	*multi_get_line(int fd)
 {
 	char		*str;
 	static char	*left[256];

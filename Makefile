@@ -2,7 +2,7 @@ srcs            = $(shell find . -name "*.c")
 
 CC              = cc
 RM              = rm -f
-CFLAGS          = -std=c99 -g -Wall -Wextra  -I.
+CFLAGS          = -std=c99 -g -Wall -Wextra -Werror -I.
 
 OBJS            = $(srcs:.c=.o)
 

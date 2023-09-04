@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   murmurlibc.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahbasara <ahbasara@student.42kocaeli.com.tr>#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 00:35:38 by ahbasara          #+#    #+#             */
+/*   Updated: 2023/09/04 23:55:07 by ahbasara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // ahbasara
 
 #ifndef MURMURLIBC_H
@@ -21,16 +33,15 @@ typedef struct s_list
 
 typedef struct s_wasd
 {
-    int             *i;
-    struct s_wasd   *prev;
-    struct s_wasd   *ww;
-    struct s_wasd   *aa;
-    struct s_wasd   *ss;
-    struct s_wasd   *dd;
-} t_wasd;
+	int				*i;
+	struct s_wasd	*prev;
+	struct s_wasd	*ww;
+	struct s_wasd	*aa;
+	struct s_wasd	*ss;
+	struct s_wasd	*dd;
+}	t_wasd;
 
-
-char					*multiRowRead(int fd);
+char					*multi_get_line(int fd);
 char					*read_to_left_str(int fd, char *left_str);
 char					*get_line(char *left_str);
 char					*new_left_str(char *left_str);
@@ -54,24 +65,25 @@ void					lladd(t_list **lst, t_list *new);
 int						lllen(t_list *lst);
 t_list					*llend(t_list *lst);
 void					llprepend(t_list **lst, t_list *new);
-void					lldel(t_list *lst, void (*del)(void*));
-void					llpop(t_list **lst, void (*del)(void*));
-void					llclr(t_list **lst, void (*del)(void*));
+void					lldel(t_list **lst, void (*del)(void **));
+void					llpop(t_list **lst, void (*del)(void **));
+void					llclr(t_list **lst, void (*del)(void **));
 void					lliter(t_list *lst, void (*f)(void *, void *), void *p);
 t_list					*llmap(t_list *lst, void *(*f)(void *)\
-						, void (*del)(void *));
+						, void (*del)(void **));
 t_wasd					*ll4new(void *content);
 t_list					*findex(t_list *p, int f);
 
-char					*toAscii(int n);
+char					*x_itoa(int n);
 int						isalpha(int c);
 int						isnum(int c);
 int						isalnum(int c);
 int						isascii(int c);
 int						isprint(int c);
-int						camelCase(int c);
-int						gnomeCase(int c);
+int						camel(int c);
+int						gnome(int c);
 
+void					freedom(void **adr);
 void					*callocate(size_t count, size_t size);
 void					*xmemset(void *b, int c, size_t len);
 void					memnull(void *s, size_t n);
@@ -85,7 +97,7 @@ char					*strrchr(const char *s, int c);
 int						strncmp(const char *s1, const char *s2, size_t n);
 char					*strnstr(const char *haystack \
 						, const char *needle, size_t len);
-int						toInt(const char *str);
+int						x_atoi(const char *str);
 char					*strcln(const char *s1);
 char					*strcut(char const *s, \
 						unsigned int start, size_t len);
@@ -98,13 +110,14 @@ size_t					xstrlcpy(char *dst, const char *src, size_t dstsize);
 size_t					xstrlcat(char *dst, const char *src, size_t dstsize);
 char					*strmap(char const *s, \
 						char (*f)(unsigned int, char));
-void					striter(char *s, void (*f)(unsigned int, char *, void *), void *p);
+void					striter(char *s, void (*f)(unsigned int, char *, void \
+						*), void *p);
 
 char					**seperate(char const *s, char c);
 
-void					fdWriteChar(char c, int fd);
-void					fdWriteStr(char *s, int fd);
-void					fdWriteEol(char *s, int fd);
-void					fdWriteNum(int n, int fd);
+void					char2fd(char c, int fd);
+void					str2fd(char *s, int fd);
+void					eol2fd(char *s, int fd);
+void					num2fd(int n, int fd);
 
 #endif

@@ -1,3 +1,4 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
@@ -12,22 +13,22 @@ void	ft_putnbr_fd(int n, int fd)
 }
  */
 
-void	fdWriteNum(int n, int fd)
+void	num2fd(int n, int fd)
 {
 	if (n == -2147483648)
-		fdWriteStr("-2147483648", fd);
+		str2fd("-2147483648", fd);
 	else
 	{
 		if (n < 0)
 		{
-			fdWriteChar('-', fd);
+			char2fd('-', fd);
 			n = n * -1;
 		}
 		if (n >= 9)
 		{
-			fdWriteNum(n / 10, fd);
+			num2fd(n / 10, fd);
 		}
-		fdWriteChar((n % 10) + '0', fd);
+		char2fd((n % 10) + '0', fd);
 	}
 }
 

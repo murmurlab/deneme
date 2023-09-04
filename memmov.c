@@ -1,9 +1,10 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
 
 void	*memmove(void *dest, const void *src, size_t n)
-{	
+{
 	if (dest > src)
 	{
 		while (n--)

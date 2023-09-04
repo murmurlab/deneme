@@ -1,9 +1,10 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
 /* #include <fcntl.h>  */
 
-void	fdWriteChar(char c, int fd)
+void	char2fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

@@ -1,4 +1,4 @@
-(
+/* (
 	((*s != '%') && ((lne += mr_putstr(NULL, 0, *s++)) || 1))
 	|| (((*(++s)) == 'c' && s++) && ((lne += mr_putstr(NULL, 0, va_arg(argl, int))) || 1))
 	|| ((*s == 's' && s++) && ((lne += mr_putstr(va_arg(argl, char*), 1, 0)) || 1))
@@ -8,4 +8,4 @@
 	|| ((*s == 'x' && s++) && ((lne += itoa_base_v2(va_arg(argl, unsigned int), "0123456789abcdef", 0)) || 1))
 	|| ((*s == 'X' && s++) && ((lne += itoa_base_v2(va_arg(argl, unsigned int), "0123456789ABCDEF", 0)) || 1))
 	|| ((*s == '%' && s++) && ((lne += mr_putstr(NULL, 0, '%')) || 1))
-);
+); */

@@ -1,3 +1,4 @@
+
 // ahbasara
 
 int	isprint(int c)

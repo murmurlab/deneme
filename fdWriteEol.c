@@ -1,8 +1,9 @@
+
 // ahbasara
 
 #include "murmurlibc.h"
 
-void	fdWriteEol(char *s, int fd)
+void	eol2fd(char *s, int fd)
 {
 	write(fd, s, xstrlen(s));
 	write(fd, "\n", 1);
