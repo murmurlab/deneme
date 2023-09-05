@@ -30,6 +30,14 @@ if [ -n "$insert_file" ]; then
   insert_content="$(cat "$insert_file")\n"
 fi
 
+if [ ${#dosyalar[@]} -eq 0 ] || ([ "$delete_start" = false ] && [ -z "$insert_content" ]) ; then
+  echo "Kullanım: $0 <<-in path/of/header> | <-ex [-b]>> <file1> [file2 ...]"
+  echo "-b                : backup source file"
+  echo "-in path/of/header: insert header if doesn't exist"
+  echo "-ex               : extract header if it is exist"
+  exit 1
+fi
+
 for dosya in "${dosyalar[@]}"; do
   satir_sayisi=$(cat "$dosya" | wc -l)
 
