@@ -1,9 +1,6 @@
-
-// ahbasara
-
 #include "murmurlibc.h"
 
-void	llpop(t_list **lst, void (*del)(void **))
+void	lppop(void **node, void (*del)(void **))
 {
 	t_list	*tmp;
 

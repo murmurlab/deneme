@@ -49,6 +49,9 @@ void					check_format(va_list argl, \
 							const char **str, int *len);
 int						p(const char *str, ...);
 
+void					**lpnod(void **node, int index);
+void					**lpnew(void *content);
+
 t_list					*llnew(void *content);
 void					lladd(t_list **lst, t_list *new);
 int						lllen(t_list *lst);
