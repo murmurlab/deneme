@@ -3,13 +3,13 @@
 
 #include "murmurlibc.h"
 
-void	llprepend(t_list **alst, t_list *new)
+void	lp_push(t_link *bash, t_link new)
 {
-	if (alst)
+	if (bash)
 	{
-		if (*alst)
-			new->next = *alst;
-		*alst = new;
+		if (*bash)
+			new[1] = *bash;
+		*bash = new;
 	}
 }
 

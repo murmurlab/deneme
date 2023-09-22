@@ -1,15 +1,15 @@
 #include "murmurlibc.h"
 
-void	lppop(void **node, void (*del)(void **))
+void	lp_pop(t_link *adrofnod, void (*del)(void **))
 {
-	t_list	*tmp;
+	t_link	tmp;
 
-	if (!del || !lst || !*lst)
+	if (!del || !adrofnod || !*adrofnod)
 		return ;
-	if (lst && *lst)
+	if (adrofnod && *adrofnod)
 	{
-		tmp = (*lst)->next;
-		lldel(lst, del);
-		*lst = tmp;
+		tmp = (*adrofnod)[1];
+		lp_del(*adrofnod, del);
+		*adrofnod = tmp;
 	}
 }

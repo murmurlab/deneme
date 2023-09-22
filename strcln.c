@@ -8,7 +8,7 @@
 
 #include "murmurlibc.h"
 
-char	*strdup(const char *s1)
+char	*strcln(const char *s1)
 {
 	char	*str;
 	size_t	i;

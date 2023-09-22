@@ -1,8 +1,8 @@
 #include "murmurlibc.h"
 
-void	**lpnew(void *content)
+t_link	lp_new(void *content)
 {
-	void	**node;
+	t_link	node;
 
 	node = callocate(sizeof(void *), 2);
 	if (node == NULL)

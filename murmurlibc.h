@@ -12,6 +12,8 @@
 #  define BUFFER_SIZE 4
 # endif
 
+typedef void **	t_link;
+
 typedef struct s_list
 {
 	void			*content;
@@ -49,15 +51,20 @@ void					check_format(va_list argl, \
 							const char **str, int *len);
 int						p(const char *str, ...);
 
-void					**lpnod(void **node, int index);
-void					**lpnew(void *content);
+t_link					lp_nod(t_link node, int index);
+t_link					lp_new(void *content);
+t_link					lp_end(t_link lst);
+void					lp_push(t_link *bash, t_link new);
+void					lp_del(t_link lst, void (*del)(void **));
+void					lp_pop(t_link *adrofnod, void (*del)(void **));
+void					lp_add(t_link *nod, t_link new);
 
 t_list					*llnew(void *content);
 void					lladd(t_list **lst, t_list *new);
 int						lllen(t_list *lst);
 t_list					*llend(t_list *lst);
 void					llprepend(t_list **lst, t_list *new);
-void					lldel(t_list **lst, void (*del)(void **));
+void					lldel(t_list *lst, void (*del)(void **));
 void					llpop(t_list **lst, void (*del)(void **));
 void					llclr(t_list **lst, void (*del)(void **));
 void					lliter(t_list *lst, void (*f)(void *, void *), void *p);

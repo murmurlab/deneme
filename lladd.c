@@ -1,9 +1,4 @@
 
-
-
-
-
-
 // ahbasara
 
 #include "murmurlibc.h"
