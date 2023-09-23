@@ -11,6 +11,7 @@ void	lp_add(t_link *nod, t_link new)
 		if (*nod)
 		{
 			last = lp_end(*nod);
+			new[2] = last;
 			last[1] = new;
 		}
 		else

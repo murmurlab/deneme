@@ -24,7 +24,7 @@ size_t	xstrlcpy(char *dst, const char *src, size_t dstsize)
 	{
 		*dst++ = *src++;
 	}
-	*dst = 0;
+	// *dst = 0;
 	return (ret);
 }
 

@@ -12,6 +12,10 @@
 #  define BUFFER_SIZE 4
 # endif
 
+#define INT32_MAX        2147483647
+#define INT32_MIN        (-INT32_MAX-1)
+
+
 typedef void **	t_link;
 
 typedef struct s_list
@@ -51,6 +55,7 @@ void					check_format(va_list argl, \
 							const char **str, int *len);
 int						p(const char *str, ...);
 
+int						lp_len(t_link lst);
 t_link					lp_nod(t_link node, int index);
 t_link					lp_new(void *content);
 t_link					lp_end(t_link lst);
@@ -58,6 +63,8 @@ void					lp_push(t_link *bash, t_link new);
 void					lp_del(t_link lst, void (*del)(void **));
 void					lp_pop(t_link *adrofnod, void (*del)(void **));
 void					lp_add(t_link *nod, t_link new);
+int						lp_iter(t_link lst, int i, void (*f)(void *, int index, void *), void *p);
+t_link					lp_filter(t_link nod, int f(void *node_iterate, void *data_compare), void *data);
 
 t_list					*llnew(void *content);
 void					lladd(t_list **lst, t_list *new);
@@ -96,7 +103,7 @@ char					*strrchr(const char *s, int c);
 int						strncmp(const char *s1, const char *s2, size_t n);
 char					*strnstr(const char *haystack \
 						, const char *needle, size_t len);
-int						x_atoi(const char *str);
+long					x_atoi(const char *str);
 char					*strcln(const char *s1);
 char					*strcut(char const *s, \
 						unsigned int start, size_t len);

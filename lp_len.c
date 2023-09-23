@@ -2,14 +2,14 @@
 
 #include "murmurlibc.h"
 
-int	lllen(t_list *lst)
+int	lp_len(t_link lst)
 {
 	size_t	i;
 
 	i = 0;
 	while (lst)
 	{
-		lst = lst->next;
+		lst = lst[1];
 		i++;
 	}
 	return (i);
