@@ -10,7 +10,9 @@ void	lp_pop(t_link *adrofnod, void (*del)(void **))
 	{
 		tmp = (*adrofnod)[1];
 		lp_del(*adrofnod, del);
-		(*adrofnod)[2] = 0; 
+		// tmp[2] = 0;
 		*adrofnod = tmp;
+		if (*adrofnod)
+			(*adrofnod)[2] = 0;
 	}
 }

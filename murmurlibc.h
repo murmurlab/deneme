@@ -55,6 +55,9 @@ void					check_format(va_list argl, \
 							const char **str, int *len);
 int						p(const char *str, ...);
 
+int						cmd(t_link *stack_a, t_link *stack_b, char *cmd);
+
+int						lp_swap(t_link a, t_link b);
 int						lp_len(t_link lst);
 t_link					lp_nod(t_link node, int index);
 t_link					lp_new(void *content);

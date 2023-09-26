@@ -18,6 +18,8 @@ long	x_atoi(const char *str)
 	res = 0;
 	while (*str >= '0' && *str <= '9')
 		res = (res * 10) + (*str++ - '0');
+	if ((!(*str >= '0') || !(*str <= '9')) && *str != 0)
+		return(0);
 	return ((res * is_neg));
 }
 
