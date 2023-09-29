@@ -55,7 +55,10 @@ void					check_format(va_list argl, \
 							const char **str, int *len);
 int						p(const char *str, ...);
 
-int						cmd(t_link *stack_a, t_link *stack_b, char *cmd);
+int						cmd(t_link *stack_a, t_link *stack_b, char *cmd, int print);
+
+void					del(void **tab);
+void					iter_stack_func(void *iter, int index, void *data);
 
 int						lp_swap(t_link a, t_link b);
 int						lp_len(t_link lst);
@@ -103,7 +106,7 @@ void					*xmemchr(const void *s, int c, size_t n);
 
 char					*xstrchr(const char *s, int c);
 char					*strrchr(const char *s, int c);
-int						strncmp(const char *s1, const char *s2, size_t n);
+int						xstrncmp(const char *s1, const char *s2, size_t n);
 char					*strnstr(const char *haystack \
 						, const char *needle, size_t len);
 long					x_atoi(const char *str);

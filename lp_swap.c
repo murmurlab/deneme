@@ -46,7 +46,6 @@ int	lp_swap(t_link a, t_link b)
 	if (b[1])
 		((t_link)b[1])[2] = b;
 	if (b[2])
-	((t_link)b[2])[1] = b;
-	// null cntl
+		((t_link)b[2])[1] = b;
 	return (1);
 }
