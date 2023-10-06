@@ -16,6 +16,7 @@
 #define INT32_MIN        (-INT32_MAX-1)
 
 
+typedef void *	t_intptr;
 typedef void **	t_link;
 
 typedef struct s_list
@@ -60,6 +61,8 @@ int						cmd(t_link *stack_a, t_link *stack_b, char *cmd, int print);
 void					del(void **tab);
 void					iter_stack_func(void *iter, int index, void *data);
 
+t_link					lp_dup(t_link lp);
+int						*lp_toIntArray(t_link lp);
 int						lp_swap(t_link a, t_link b);
 int						lp_len(t_link lst);
 t_link					lp_nod(t_link node, int index);
