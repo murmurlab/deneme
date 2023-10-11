@@ -6,7 +6,7 @@ t_link	lp_nod(t_link node, int index)
 		return (0);
 	while (index-- > 0 && node[1])
 		node = node[1];
-	if (index)
+	if (index > -1)
 		return (0);
 	return (node);
 }
