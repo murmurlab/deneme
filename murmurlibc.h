@@ -1,4 +1,3 @@
-
 // ahbasara
 
 #ifndef MURMURLIBC_H
@@ -12,9 +11,8 @@
 #  define BUFFER_SIZE 4
 # endif
 
-#define INT32_MAX        2147483647
-#define INT32_MIN        (-INT32_MAX-1)
-
+# define INT32_MAX	2147483647
+# define INT32_MIN	(-INT32_MAX-1)
 
 typedef void *	t_intptr;
 typedef void **	t_link;
@@ -37,6 +35,12 @@ typedef struct s_wasd
 	struct s_wasd	*dd;
 }	t_wasd;
 
+int						dup_cntl(void *nod, void *cmp);
+
+int
+						ft_isnan(register double x);
+double					ft_fabs(register double x);
+
 char					*multi_get_line(int fd);
 char					*read_to_left_str(int fd, char *left_str);
 char					*get_line(char *left_str);
@@ -56,10 +60,23 @@ void					check_format(va_list argl, \
 							const char **str, int *len);
 int						p(const char *str, ...);
 
-int						cmd(t_link *stack_a, t_link *stack_b, char *cmd, int print);
+int						cmd(t_link *stack_a, t_link *stack_b, char *cmd, \
+							int print);
 
 void					del(void **tab);
 void					iter_stack_func(void *iter, int index, void *data);
+t_link					bubble_sort(t_link stack);
+int						find_pivot(t_link stack);
+int						*biggest_gap(int *zone, int *pivot, t_link stack, \
+									int len);
+int						find_2nd_biggest(t_link stack);
+int						find_smallest(t_link stack);
+int						find_biggest(t_link stack);
+int						find_index_of_biggest(t_link stack);
+int						get_closest(t_link stack, int pivot, int mod);
+int						midlen(int val, int len);
+int						find_index_of_smallest(t_link stack);
+int						between(t_link stack, int val);
 
 t_link					lp_dup(t_link lp);
 int						*lp_toIntArray(t_link lp);
@@ -72,8 +89,10 @@ void					lp_push(t_link *bash, t_link new);
 void					lp_del(t_link lst, void (*del)(void **));
 void					lp_pop(t_link *adrofnod, void (*del)(void **));
 void					lp_add(t_link *nod, t_link new);
-int						lp_iter(t_link lst, int i, void (*f)(void *, int index, void *), void *p);
-t_link					lp_filter(t_link nod, int f(void *node_iterate, void *data_compare), void *data);
+int						lp_iter(t_link lst, int i, void (*f)(void *, \
+								int index, void *), void *p);
+t_link					lp_filter(t_link nod, int f(void *node_iterate, \
+								void *data_compare), void *data);
 
 t_list					*llnew(void *content);
 void					lladd(t_list **lst, t_list *new);
